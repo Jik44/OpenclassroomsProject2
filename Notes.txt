@@ -1,0 +1,1 @@
+Attention, le bouton "s"inscrire" dans le menu doit se trouver sur la même ligne que le logo lorsque l'on réduit l'écran.
