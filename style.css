@@ -4,14 +4,14 @@
 }
 
 body {
-    border: saddlebrown solid 2px;
+    /* border: saddlebrown solid 2px; */
     margin: 0;
     padding: 0;
     font-family : 'Raleway', sans-serif;
 
     display: flex;
     flex-flow: column wrap;
-    width: 90%;
+    width: 92%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -231,7 +231,7 @@ form input[type="text"] {                /*<-- apparence du champs de saisi  */
 /* ---------------- "Hébergements à Marseille" ------------------- */
 
 #lodgingList {                   /*<-- Ici, les éléments "article" et "aside" fonctionnent correctement. Pas besoin d'y toucher*/
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start; /* <-- S'il y a un problème de marge, essayer "flex-start" */
@@ -245,36 +245,33 @@ form input[type="text"] {                /*<-- apparence du champs de saisi  */
 #lodgingList article {              /* <-- Partie "Hébergements à Marseille" */
     background-color: #F2F2F2;
     border-radius: 15px;
+    padding: 25px 25px;
 
-    width: 800px;
-    height: 550px;
+    width: 770px;
+    height: 530px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-right: 30px;
 
 }
 
 .accommodation {            /* <-- Vignettes de "Hébergements à Marseille" */
     /* background-color: aqua; */
-
         /* Disposition des vignettes */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-
-
-    overflow: hidden;
 }
 
 /* Dimensions des images de "Hébergements à Marseille */
 article img {                                          /* <-- Peut-être chercher à mettre les images "en-dessous" de leur légende */
-    border-radius: 12px;
-    padding: 5px;
-    border-radius: 12px 12px 0 0;
+    padding: 5px 5px;
+    border-radius: 15px 15px 0 0;
 
-    width: 236px;                     /*<-- Je ne sais pas pourquoi, mais mes images sont décalées après avoir mis cette taille */
+    width: 226px;                     /*<-- Je ne sais pas pourquoi, mais mes images sont décalées après avoir mis cette taille */
     height: 113px;
     /* display: flex;
     flex-flow: column nowrap;
@@ -283,28 +280,49 @@ article img {                                          /* <-- Peut-être cherche
 
 }
 
-article figure {
+article figure {                   /* <-- Positionnement des vignettes */
     background-color: white;
     border-radius: 15px;
     
-    height: 199px;
-    width: 246px;
-}
-/*
-article figcaption {
-    border: teal solid 2px;
+    height: 190px;
+    width: 233px;
+
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;                     <-- Chercher à comprendre pourquoi cette propriété ne marche pas
-    align-items: flex-end;
-    margin: 10px 12px;
-}*/
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 7px;
+}
+
+article figcaption {
+    width: 100%;
+    margin-left: 20px;
+
+    /* border: teal solid 2px; */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+article figcaption p, .grade {
+    /* background-color: #0065FC; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: baseline;
+    align-items: flex-start;
+
+    margin: 2px;
+}
  /* ---------------- "Les plus populaires" ------------------- */ 
 
  #mostPopular {                  /* <-- Partie "Les plus populaires" */
     background-color: #F2F2F2;
     border-radius: 15px;
-    padding: 30px 25px;
+    padding: 25px 25px;
         
         /* Disposition du titre et des vignettes */
     display: flex;
@@ -314,39 +332,62 @@ article figcaption {
 
         /* Taille et placement du bloc contenant le titre et les vignettes */
     width: 400px;
-    height: 550px;
+    height: 530px;
 
 }
 
 #headerPopular {
+    width: 100%;                    /* <-- Taille de la boîte contenant le titre h2 et l'icône */
+
     /* background-color: white; */
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+
+    /* margin-top: 25px; */
 }
 
 #mostPopular figure {           /* <-- Vignettes "Les plus populaires" */
-    /* background-color: blue; */
+    background-color: white;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
 
-    height: 144px;
+    height: 135px;
     width: 342px;
+    border-radius: 15px;
+
+    margin-top: 0;
 }
+
+#popularList figcaption * {
+    /* background-color: tomato; */
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+#popularList > figcaption :nth-child(2) {
+    background-color: teal;
+    margin-top: 15px;
+}
+
+
+/* #mostPopular .grade {
+    background-color: yellow;
+    align-self: flex-start;               /* <-- Je ne sais pas pourquoi, mais cette propriété ne fonctionne pas.
+}*/
 
 #popularList {                  /* <-- Bloc de vignettes "Les plus populaires" */
     /* background-color: purple; */
+    width: 100%;
+    height: 530px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-
-    overflow: hidden;
 }
-
 
 #headerPopular * {
     display: flex;
@@ -366,10 +407,8 @@ aside {
  aside img {
     width: 126px;
     height: 134px;
-    border-radius: 12px;
     padding: 5px;
-    border-radius: 12px 12px 0 0;
-  
+    border-radius: 15px 0px 0px 15px;
 } 
 /*
 aside figure {
@@ -446,7 +485,13 @@ footer {
     width: 100%;
     height: 200px;
     background-color: #F2F2F2;
+}
 
+.partFooter {
+    margin-right: 220px;
+}
+.partFooter * {
+    margin: 15px 0;
 }
 
 
