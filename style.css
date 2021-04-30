@@ -1,14 +1,13 @@
 /* ---------------- GENERAL -------------------*/
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
 body {
     /* border: saddlebrown solid 2px; */
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     font-family : 'Raleway', sans-serif;
-
     display: flex;
     flex-flow: column wrap;
     width: 92%;
@@ -17,7 +16,7 @@ body {
 }
 
 #logo h1 {
-    display: none;                  /*<-- J'ai écris ce titre en h1 et je l'ai fait disparaître pour améliorer le référencement tout en conservant uniquement le logo */
+    display: none;                  
 }
 
 h2 {
@@ -45,23 +44,22 @@ a:hover {
 }
 /* ---------------- HEADER -------------------*/
 
-#menu {
+header {
     /* border: solid red 2px; */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    /* position: relative; */
     margin-left: 5px;
     margin-right: 10px;
     margin-top: 15px;
 }
-#menu ul {
+header ul {
     /* border: solid black 2px; */
     display: flex;
 }
 
-#menu li {
+header li {
     /* border: solid blueviolet 2px; */
     margin: 0 30px;
 }
@@ -95,38 +93,37 @@ a:hover {
 
 /* ---------------- SEARCH BAR ------------------- */
 
+/*margin-bottom: 20px; --> gère l'espace entre la barre de recherche et les filtres */
 #searchBar {
     /* border: pink solid 2px; */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-
-    margin-bottom: 20px;                /*<-- gère l'espace entre la barre de recherche et les filtres */
-
+    margin-bottom: 20px;                
     border-radius: 15px 15px;
 
 }
 
-form input[type="submit"] {             /*<-- apparence du bouton "rechercher" */
+ /* apparence du bouton "rechercher" */
+form input[type="submit"] {            
     background: #0065FC;
     border: 1px #0065FC solid;
     border-radius: 0 15px 15px 0;
     color: #FFF;
     height: 40px;
-    padding: 0px 15px;
     font-family : 'Raleway', sans-serif;
-
     cursor: pointer;
-
-
 }
 
-form input[type="text"] {                /*<-- apparence du champs de saisi  */
+/* apparence du champs de saisi  */
+form input[type="text"] {                
     /* background-color: red; */
     height: 39px;
     border: #F2F2F2 solid 2px;
     font-family : 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 #searchBar i {
@@ -136,8 +133,6 @@ form input[type="text"] {                /*<-- apparence du champs de saisi  */
     border-radius: 15px 0 0 15px;
 }
 
-
-
 /* ---------------- FILTERS ------------------- */
 
 #filters {
@@ -146,8 +141,6 @@ form input[type="text"] {                /*<-- apparence du champs de saisi  */
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-    /* margin: 0px 10px; */
-    /* position: relative; */
 }
 
 .switch {
@@ -157,9 +150,7 @@ form input[type="text"] {                /*<-- apparence du champs de saisi  */
     justify-content: center;
     align-items: center;
     margin: 0px 10px;
-
     height: 50px;
-    
     border-radius: 50px;
     margin-right: 20px;
     margin-bottom: 10px;
@@ -197,9 +188,7 @@ form input[type="text"] {                /*<-- apparence du champs de saisi  */
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-
     margin: 25px 0;
-
 }
 
 #result * {
@@ -212,13 +201,11 @@ form input[type="text"] {                /*<-- apparence du champs de saisi  */
     justify-content: center;
     align-items: center;
     margin-left: 0;
-
     /* Taille du cercle */
     border: 2px solid #F2F2F2;
     width: 29px;
     height: 29px;
     border-radius: 50%;
-    
     /* Taille de la lettre "i" */
     font-size: 10px;
     color: #0065FC;
@@ -229,24 +216,22 @@ form input[type="text"] {                /*<-- apparence du champs de saisi  */
 }
 
 /* ---------------- "Hébergements à Marseille" ------------------- */
-
-#lodgingList {                   /*<-- Ici, les éléments "article" et "aside" fonctionnent correctement. Pas besoin d'y toucher*/
+/* Dans #lodgingList, les éléments "article" et "aside" fonctionnent correctement. Pas besoin d'y toucher. */
+#lodgingList {                   
     /* background-color: red; */
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start; /* <-- S'il y a un problème de marge, essayer "flex-start" */
+    justify-content: flex-start;
     align-items: flex-start;
-
     width: 100%;
     height: 625px;
-
 }
 
-#lodgingList article {              /* <-- Partie "Hébergements à Marseille" */
+/* <-- Partie "Hébergements à Marseille" */
+#lodgingList article {              
     background-color: #F2F2F2;
     border-radius: 15px;
     padding: 25px 25px;
-
     width: 770px;
     height: 530px;
     display: flex;
@@ -254,12 +239,11 @@ form input[type="text"] {                /*<-- apparence du champs de saisi  */
     justify-content: flex-start;
     align-items: flex-start;
     margin-right: 30px;
-
 }
 
-.accommodation {            /* <-- Vignettes de "Hébergements à Marseille" */
+/* Vignettes de "Hébergements à Marseille" */
+.accommodation {            
     /* background-color: aqua; */
-        /* Disposition des vignettes */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -267,31 +251,24 @@ form input[type="text"] {                /*<-- apparence du champs de saisi  */
 }
 
 /* Dimensions des images de "Hébergements à Marseille */
-article img {                                          /* <-- Peut-être chercher à mettre les images "en-dessous" de leur légende */
+/* Peut-être chercher à mettre les images "en-dessous" de leur légende */
+article img {                             
     padding: 5px 5px;
     border-radius: 15px 15px 0 0;
-
-    width: 226px;                     /*<-- Je ne sais pas pourquoi, mais mes images sont décalées après avoir mis cette taille */
+    width: 226px;             
     height: 113px;
-    /* display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center; */
-
 }
 
-article figure {                   /* <-- Positionnement des vignettes */
+/* Positionnement des vignettes */
+article figure {                   
     background-color: white;
     border-radius: 15px;
-    
     height: 190px;
     width: 233px;
-
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-
     margin-top: 0;
     margin-left: 0;
     margin-right: 7px;
@@ -300,7 +277,6 @@ article figure {                   /* <-- Positionnement des vignettes */
 article figcaption {
     width: 100%;
     margin-left: 20px;
-
     /* border: teal solid 2px; */
     display: flex;
     flex-flow: column nowrap;
@@ -314,56 +290,44 @@ article figcaption p, .grade {
     flex-flow: row nowrap;
     justify-content: baseline;
     align-items: flex-start;
-
     margin: 2px;
 }
  /* ---------------- "Les plus populaires" ------------------- */ 
-
- #mostPopular {                  /* <-- Partie "Les plus populaires" */
+/* justify-content: center; --> Cette propriété ne fonctionne pas: Je pense que comme la balise aside est de type bloc, il faut la centrer avec margin-left, margin-right, et après avoir définit une taille. */
+ #mostPopular {                  
     background-color: #F2F2F2;
     border-radius: 15px;
     padding: 25px 25px;
-        
-        /* Disposition du titre et des vignettes */
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;    /* <-- Cette propriété ne fonctionne pas: Je pense que comme la balise aside est de type bloc                               il faut la centrer avec margin-left, margin-right, et après avoir définit une taille. */
+    justify-content: center;
     align-items: center;
-
-        /* Taille et placement du bloc contenant le titre et les vignettes */
     width: 400px;
     height: 530px;
-
 }
 
 #headerPopular {
-    width: 100%;                    /* <-- Taille de la boîte contenant le titre h2 et l'icône */
-
-    /* background-color: white; */
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-
-    /* margin-top: 25px; */
 }
 
-#mostPopular figure {           /* <-- Vignettes "Les plus populaires" */
+/* Vignettes "Les plus populaires" */
+#mostPopular figure {           
     background-color: white;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-
     height: 135px;
     width: 342px;
     border-radius: 15px;
-
     margin-top: 0;
 }
 
 #popularList figcaption * {
-    /* background-color: tomato; */
     margin-bottom: 5px;
     margin-left: 5px;
 }
@@ -373,14 +337,8 @@ article figcaption p, .grade {
     margin-top: 15px;
 }
 
-
-/* #mostPopular .grade {
-    background-color: yellow;
-    align-self: flex-start;               /* <-- Je ne sais pas pourquoi, mais cette propriété ne fonctionne pas.
-}*/
-
-#popularList {                  /* <-- Bloc de vignettes "Les plus populaires" */
-    /* background-color: purple; */
+/* Bloc de vignettes "Les plus populaires" */
+#popularList {                  
     width: 100%;
     height: 530px;
     display: flex;
@@ -410,34 +368,19 @@ aside {
     padding: 5px;
     border-radius: 15px 0px 0px 15px;
 } 
-/*
-aside figure {
-    background-color: white;
-    display: inline-block;
-    border-radius: 12px;
-}
 
-aside figcaption {
-    margin: 10px 12px;
-
-}
-*/
 /* ---------------- "Activités à Marseille" ------------------- */
 
-#Activity {
+#activity {
     /* background-color: tomato; */
-
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-
 }
 
 #activityPictures {
     /* background-color:cadetblue; */
-    /* width: 100%; */
-
     /* Positionnement des photos */
     display: flex;
     flex-flow: row wrap;
@@ -446,7 +389,8 @@ aside figcaption {
 
 }
 
-#activityPictures figure {                      /*<--  Permet de modifier les marges des vignettes */
+/* Permet de modifier les marges des vignettes */
+#activityPictures figure {                      
     margin-left: 0;
     margin-right: 20px;
     padding: 0;
