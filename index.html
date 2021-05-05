@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reservia</title>
         <!-- FONT & ICONS -->
         <script src="https://kit.fontawesome.com/96b26cba24.js" crossorigin="anonymous"></script>
         <!-- Raleway -->
@@ -10,7 +11,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">       
         <!-- page de styles -->
         <link rel="stylesheet" href="style.css" />
-        <title>Reservia</title>
     </head>
     <body>
         <!-- HEADER -->
@@ -24,7 +24,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#lodgingList" id="accommoBtn">Hébergements</a>
+                        <a href="#lodgingList" id="accommoBtn">Hébergement</a>
                     </li>
                     <li>
                         <a href="#activity">Activités</a>
@@ -84,9 +84,9 @@
         <!-- "Hébergements à Marseille" -->
         <main>
             <section id="lodgingList">
-                <article>
+                <article class="layout">
                     <h2>Hebergements à Marseille</h2>
-                    <div class="accommodation">                            
+                    <div id="accommodation">                            
                         <figure>
                             <a href="#">
                                 <img src="images/hebergements/4_small/cannebière.jpg" alt="image de l'Auberge de la Cannebière">
@@ -94,13 +94,13 @@
                             <figcaption>
                                 <p><strong>Auberge la Cannnebière</strong></p>
                                     
-                                <p>Nuit à partir de <strong>25e</strong></p>
+                                <p>Nuit à partir de <strong>25€</strong></p>
                                     <div class="grade">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
+                                        <i class="fas fa-star"></i>
                                     </div>
                             </figcaption>
                         </figure>
@@ -134,7 +134,7 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </figcaption>
                         </figure>
@@ -150,8 +150,8 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </figcaption>
                         </figure>
@@ -168,7 +168,7 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </figcaption>
                         </figure>
@@ -193,7 +193,7 @@
                     <strong>Afficher plus</strong>       
                 </article>
                 <!-- "Les plus populaires" -->    
-                <aside id="mostPopular">
+                <aside class="layout">
                     <div id="headerPopular">
                         <h2>Les plus populaires</h2>
                         <i class="fas fa-chart-line"></i>
@@ -204,8 +204,10 @@
                                 <img src="images/hebergements/4_small/soleilMatin.jpg" alt="">
                             </a>
                             <figcaption>
-                                <p><strong>Hôtel Le soleil du matin</strong></p>
-                                <p>Nuit à partir de 128€</p>
+                                <div class="littleHeader">
+                                    <p><strong>Hôtel Le soleil du matin</strong></p>
+                                    <p>Nuit à partir de 128€</p>
+                                </div>
                                 <div class="grade">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -220,14 +222,16 @@
                                 <img src="images/hebergements/4_small/eau.jpg" alt="">
                             </a>
                             <figcaption>
-                                <p><strong>Au coeur de l'eau Chambres d'hôtes</strong></p>
-                                <p>Nuit à partir de 71€</p>
+                                <div class="littleHeader">
+                                    <p><strong>Au coeur de l'eau Chambres d'hôtes</strong></p>
+                                    <p>Nuit à partir de 71€</p>
+                                </div>
                                 <div class="grade">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </figcaption>
                         </figure>
@@ -236,14 +240,16 @@
                                 <img src="images/hebergements/4_small/bleuBlanc.jpg" alt="">
                             </a>
                             <figcaption>
-                                <p><strong>Hôtel Tout bleu et Blanc</strong></p>
-                                <p>Nuit à partir de <strong>68€</strong></p>
+                                <div class="littleHeader">
+                                    <p><strong>Hôtel Tout bleu et Blanc</strong></p>
+                                    <p>Nuit à partir de <strong>68€</strong></p>
+                                </div>
                                 <div class="grade">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </figcaption>
                         </figure>

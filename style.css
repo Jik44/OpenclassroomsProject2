@@ -4,19 +4,16 @@
 }
 
 body {
-    /* border: saddlebrown solid 2px; */
-    /* margin: 0; */
+    margin: 0 auto;
     padding: 0;
     font-family : 'Raleway', sans-serif;
     display: flex;
     flex-flow: column wrap;
     width: 92%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #logo h1 {
-    display: none;                  
+    display: none;
 }
 
 h2 {
@@ -45,22 +42,25 @@ a:hover {
 /* ---------------- HEADER -------------------*/
 
 header {
-    /* border: solid red 2px; */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    margin-left: 5px;
-    margin-right: 10px;
+    width: 100%;
+    height: auto;
     margin-top: 15px;
 }
+
+#logo {
+    margin-left: 5px;
+}
+
 header ul {
-    /* border: solid black 2px; */
     display: flex;
+    margin-right: 10px;
 }
 
 header li {
-    /* border: solid blueviolet 2px; */
     margin: 0 30px;
 }
 
@@ -93,20 +93,18 @@ header li {
 
 /* ---------------- SEARCH BAR ------------------- */
 
-/*margin-bottom: 20px; --> gère l'espace entre la barre de recherche et les filtres */
 #searchBar {
-    /* border: pink solid 2px; */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 20px;                
+    margin-bottom: 20px;
     border-radius: 15px 15px;
 
 }
 
  /* apparence du bouton "rechercher" */
-form input[type="submit"] {            
+form input[type="submit"] {
     background: #0065FC;
     border: 1px #0065FC solid;
     border-radius: 0 15px 15px 0;
@@ -117,8 +115,7 @@ form input[type="submit"] {
 }
 
 /* apparence du champs de saisi  */
-form input[type="text"] {                
-    /* background-color: red; */
+form input[type="text"] {
     height: 39px;
     border: #F2F2F2 solid 2px;
     font-family : 'Raleway', sans-serif;
@@ -136,7 +133,6 @@ form input[type="text"] {
 /* ---------------- FILTERS ------------------- */
 
 #filters {
-    /* border: solid green 2px; */
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -159,8 +155,7 @@ form input[type="text"] {
 .switch * {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between; /*<-- Je ne sais pas pourquoi, mais cette propriété ne change rien. */
-    align-items: center;
+    justify-content: space-between;    align-items: center;
     margin: 0 0;
     height: 42px;
 }
@@ -183,7 +178,6 @@ form input[type="text"] {
 /* ---------------- RESULT ------------------- */
 
 #result {
-    /* border: lightseagreen solid 2px; */
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -192,7 +186,6 @@ form input[type="text"] {
 }
 
 #result * {
-    /* border: maroon solid 2px; */
     margin: 0px 10px;
 }
 
@@ -216,68 +209,73 @@ form input[type="text"] {
 }
 
 /* ---------------- "Hébergements à Marseille" ------------------- */
-/* Dans #lodgingList, les éléments "article" et "aside" fonctionnent correctement. Pas besoin d'y toucher. */
-#lodgingList {                   
-    /* background-color: red; */
+#lodgingList {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    height: 625px;
+    height: 600px;
 }
-
-/* <-- Partie "Hébergements à Marseille" */
-#lodgingList article {              
+/* Mise en page général du main */
+.layout {
     background-color: #F2F2F2;
     border-radius: 15px;
-    padding: 25px 25px;
-    width: 770px;
-    height: 530px;
+    padding: 40px;
+    height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-right: 30px;
 }
 
-/* Vignettes de "Hébergements à Marseille" */
-.accommodation {            
-    /* background-color: aqua; */
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+article h2 {
+    margin-top: 0;
 }
 
-/* Dimensions des images de "Hébergements à Marseille */
-/* Peut-être chercher à mettre les images "en-dessous" de leur légende */
-article img {                             
-    padding: 5px 5px;
-    border-radius: 15px 15px 0 0;
-    width: 226px;             
-    height: 113px;
+figure {
+    background-color: white;
+    border-radius: 15px;
+    padding: 4px;
+    box-shadow: 0px 0px 6px 0px black;
+    width: auto;
+    height: auto;
+}
+
+/* Partie "Hébergements à Marseille" */
+#lodgingList article {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Bloc contenant les vignettes de "Hébergements à Marseille" */
+#accommodation {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 206px);
+    gap: 35px;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* Positionnement des vignettes */
-article figure {                   
-    background-color: white;
-    border-radius: 15px;
-    height: 190px;
-    width: 233px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 7px;
+#accommodation figure {
+    height: 180px;
+    width: 100%;
+    margin: 0;
+}
+
+/* Dimensions des images de "Hébergements à Marseille */
+#accommodation img {
+    border-radius: 13px 13px 0 0;
+    width: 100%;
+    height: 113px;
+    object-fit: cover;
 }
 
 article figcaption {
     width: 100%;
     margin-left: 20px;
-    /* border: teal solid 2px; */
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -285,112 +283,98 @@ article figcaption {
 }
 
 article figcaption p, .grade {
-    /* background-color: #0065FC; */
     display: flex;
     flex-flow: row nowrap;
     justify-content: baseline;
     align-items: flex-start;
     margin: 2px;
 }
- /* ---------------- "Les plus populaires" ------------------- */ 
-/* justify-content: center; --> Cette propriété ne fonctionne pas: Je pense que comme la balise aside est de type bloc, il faut la centrer avec margin-left, margin-right, et après avoir définit une taille. */
- #mostPopular {                  
-    background-color: #F2F2F2;
-    border-radius: 15px;
-    padding: 25px 25px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 530px;
+.grade {
+    color: #0065fc;
+    font-size: x-small;
+}
+.grade i:last-child {
+    color: #D9D9D9;
+}
+/* Toutes les étoiles de "Hôtel Le soleil du matin" dans "Les plus populaires" */
+#popularList figure:nth-child(1) .grade i:last-child {
+    color: #0065fc;
+}
+ /* ---------------- "Les plus populaires" ------------------- */
+
+ #lodgingList aside {
+    max-width: 372px;
+    width: 100%;
 }
 
 #headerPopular {
     width: 100%;
+    height: auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
-/* Vignettes "Les plus populaires" */
-#mostPopular figure {           
-    background-color: white;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 135px;
-    width: 342px;
-    border-radius: 15px;
+#headerPopular h2 {
     margin-top: 0;
 }
 
-#popularList figcaption * {
-    margin-bottom: 5px;
-    margin-left: 5px;
+/* Vignettes "Les plus populaires" */
+aside figure {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
 }
 
-#popularList > figcaption :nth-child(2) {
-    background-color: teal;
-    margin-top: 15px;
+#popularList figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 /* Bloc de vignettes "Les plus populaires" */
-#popularList {                  
-    width: 100%;
-    height: 530px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-#headerPopular * {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+#popularList {
+    display: grid;
+    grid-template-rows: 135px 1fr;
+    gap: 15px;
+    justify-content: center;
 }
 
 aside {
-    box-sizing: border-box;
-    background-color: mediumorchid;
-    border-radius: 5px;
-    margin: 0 5px;
     flex-flow: column nowrap;
 }
 
 /* Dimensions des images de "Les plus populaires */
- aside img {
+#popularList img {
     width: 126px;
-    height: 134px;
-    padding: 5px;
-    border-radius: 15px 0px 0px 15px;
-} 
+    height: 127px;
+    border-radius: 13px 0px 0px 13px;
+    object-fit: cover;
+}
 
 /* ---------------- "Activités à Marseille" ------------------- */
 
 #activity {
-    /* background-color: tomato; */
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
 }
-
+/* Positionnement des photos */
 #activityPictures {
-    /* background-color:cadetblue; */
-    /* Positionnement des photos */
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: flex-start;
-
 }
 
 /* Permet de modifier les marges des vignettes */
-#activityPictures figure {                      
+#activityPictures figure {
     margin-left: 0;
     margin-right: 20px;
     padding: 0;
@@ -402,21 +386,10 @@ aside {
     height: 400px;
     border-radius: 12px 12px 0 0;
 }
-
-.onePicture figure {
-    background-color: white;
-    border-radius: 12px;
-}
-
 .twoPictures img {
     width: 250px;
     height: 175px;
     border-radius: 12px 12px 0 0;
-}
-
-.twoPictures figure {
-    background-color: white;
-    border-radius: 12px;
 }
 
 /* ---------------- FOOTER ------------------- */
@@ -436,20 +409,4 @@ footer {
 }
 .partFooter * {
     margin: 15px 0;
-}
-
-
-
-
-@media (max-width: 1000px) {
-    body {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-}
-
-@media (max-width: 700px) {
-    #menu {
-        flex-direction: column;
-    }
 }
