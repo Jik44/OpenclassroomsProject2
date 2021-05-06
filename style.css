@@ -4,21 +4,21 @@
 }
 
 body {
-    margin: 0 auto;
     padding: 0;
+    margin: 0 auto;
     font-family : 'Raleway', sans-serif;
     display: flex;
     flex-flow: column wrap;
-    width: 92%;
 }
 
-#logo h1 {
-    display: none;
+header, #hook, #searchBar, #filters, #result, main {
+    width: 92%;
+    margin: inherit;
 }
 
 h2 {
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight:bolder;
 }
 
 ul {
@@ -43,10 +43,9 @@ a:hover {
 
 header {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     height: auto;
     margin-top: 15px;
 }
@@ -54,14 +53,29 @@ header {
 #logo {
     margin-left: 5px;
 }
+#logo h1 {
+    display: none;
+}
 
 header ul {
     display: flex;
+    flex-wrap: wrap;
     margin-right: 10px;
 }
 
 header li {
     margin: 0 30px;
+}
+
+header nav + li {
+    background-color: #0065FC;
+
+}
+header li .blueLine {
+    background:#0065FC;
+    width: 100%;
+    height: 3px;
+    margin-bottom: 10;
 }
 
 #accommoBtn {
@@ -76,10 +90,9 @@ header li {
 
 #hook {
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
     margin-top: 15px;
 }
 
@@ -95,12 +108,11 @@ header li {
 
 #searchBar {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 20px;
     border-radius: 15px 15px;
-
 }
 
  /* apparence du bouton "rechercher" */
@@ -119,8 +131,6 @@ form input[type="text"] {
     height: 39px;
     border: #F2F2F2 solid 2px;
     font-family : 'Raleway', sans-serif;
-    padding: 0;
-    margin: 0;
 }
 
 #searchBar i {
@@ -134,7 +144,7 @@ form input[type="text"] {
 
 #filters {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
 }
@@ -182,7 +192,8 @@ form input[type="text"] {
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-    margin: 25px 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 #result * {
@@ -194,12 +205,10 @@ form input[type="text"] {
     justify-content: center;
     align-items: center;
     margin-left: 0;
-    /* Taille du cercle */
     border: 2px solid #F2F2F2;
     width: 29px;
     height: 29px;
     border-radius: 50%;
-    /* Taille de la lettre "i" */
     font-size: 10px;
     color: #0065FC;
 }
@@ -215,7 +224,8 @@ form input[type="text"] {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    height: 600px;
+    height: 550px;
+    background-color: goldenrod;
 }
 /* Mise en page général du main */
 .layout {
@@ -251,11 +261,15 @@ figure {
 /* Bloc contenant les vignettes de "Hébergements à Marseille" */
 #accommodation {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 206px);
-    gap: 35px;
+    grid-template-columns: repeat(auto-fill, 220px);
+    gap: 30px;
     justify-content: center;
     width: 100%;
     margin: 0 auto;
+}
+
+article > strong {
+    margin-top: 30px;
 }
 
 /* Positionnement des vignettes */
@@ -273,14 +287,14 @@ figure {
     object-fit: cover;
 }
 
-article figcaption {
+/* article figcaption {
     width: 100%;
     margin-left: 20px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-}
+} */
 
 article figcaption p, .grade {
     display: flex;
@@ -305,6 +319,7 @@ article figcaption p, .grade {
  #lodgingList aside {
     max-width: 372px;
     width: 100%;
+    height: 100%;
 }
 
 #headerPopular {
@@ -327,6 +342,7 @@ aside figure {
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    height: 135px;
     margin: 0;
 }
 
@@ -342,10 +358,6 @@ aside figure {
     grid-template-rows: 135px 1fr;
     gap: 15px;
     justify-content: center;
-}
-
-aside {
-    flex-flow: column nowrap;
 }
 
 /* Dimensions des images de "Les plus populaires */
@@ -398,15 +410,17 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     height: 200px;
     background-color: #F2F2F2;
+    padding: 20px 0 0 50px;
 }
 
 .partFooter {
     margin-right: 220px;
+ 
 }
-.partFooter * {
-    margin: 15px 0;
+.partFooter li {
+    margin: 10px 0;
 }
