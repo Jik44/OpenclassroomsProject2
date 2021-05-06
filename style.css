@@ -18,7 +18,7 @@ header, #hook, #searchBar, #filters, #result, main {
 
 h2 {
     font-size: 1.2em;
-    font-weight:bolder;
+    font-weight: bolder;
 }
 
 ul {
@@ -46,8 +46,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: auto;
-    margin-top: 15px;
+    height: 70px;
 }
 
 #logo {
@@ -75,7 +74,6 @@ header li .blueLine {
     background:#0065FC;
     width: 100%;
     height: 3px;
-    margin-bottom: 10;
 }
 
 #accommoBtn {
@@ -225,7 +223,6 @@ form input[type="text"] {
     align-items: flex-start;
     width: 100%;
     height: 550px;
-    background-color: goldenrod;
 }
 /* Mise en page général du main */
 .layout {
@@ -250,6 +247,7 @@ figure {
     box-shadow: 0px 0px 6px 0px black;
     width: auto;
     height: auto;
+    cursor: pointer;
 }
 
 /* Partie "Hébergements à Marseille" */
@@ -275,7 +273,7 @@ article > strong {
 /* Positionnement des vignettes */
 #accommodation figure {
     height: 180px;
-    width: 100%;
+    width: auto;
     margin: 0;
 }
 
@@ -287,19 +285,21 @@ article > strong {
     object-fit: cover;
 }
 
-/* article figcaption {
+figcaption {
     width: 100%;
-    margin-left: 20px;
+    height: 100%;
+    font-size: 0.9em;
+    padding: 0 0 5px 10px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-} */
+}
 
 article figcaption p, .grade {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: baseline;
+    justify-content: flex-start;
     align-items: flex-start;
     margin: 2px;
 }
@@ -346,10 +346,16 @@ aside figure {
     margin: 0;
 }
 
-#popularList figcaption {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+#popularList figcaption p:first-child {
+    margin-top: 8px;
+    margin-bottom: 3px;
+}
+#popularList figcaption p:nth-child(2) {
+    margin-top: 0;
+    margin-bottom: 46px;
+}
+#popularList figcaption .grade {
+    justify-content: flex-end;
 }
 
 /* Bloc de vignettes "Les plus populaires" */
