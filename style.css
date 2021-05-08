@@ -106,18 +106,27 @@ header li .blueLine {
 
 #searchBar {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 20px;
     border-radius: 15px 15px;
 }
 
+form {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
  /* apparence du bouton "rechercher" */
-form input[type="submit"] {
+form button {
     background: #0065FC;
-    border: 1px #0065FC solid;
+    /* border: 1px #0065FC solid; */
     border-radius: 0 15px 15px 0;
+    position: relative;
+    border: none;
+    outline: none;
+    left: -5px;
     color: #FFF;
     height: 40px;
     font-family : 'Raleway', sans-serif;
@@ -126,9 +135,11 @@ form input[type="submit"] {
 
 /* apparence du champs de saisi  */
 form input[type="text"] {
-    height: 39px;
+    height: 40px;
     border: #F2F2F2 solid 2px;
+    outline: none;
     font-family : 'Raleway', sans-serif;
+    padding: 0 10px;
 }
 
 #searchBar i {
