@@ -265,7 +265,8 @@ margin-right: 15px;
 .layout {
     background-color: #F2F2F2;
     border-radius: 15px;
-    padding: 40px;
+    /* padding: 40px; */
+    padding: 4%;
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
@@ -299,19 +300,17 @@ img {
 
 /* Partie "Hébergements à Marseille" */
 #lodgingList article {
-    width: 65%;
-    min-width: 800px;
+    width: 67%;
+    height: auto;
+    min-width: 272px;
+    /* max-width: 800px; */
 }
 
 /* Bloc contenant les vignettes de "Hébergements à Marseille" */
 #accommodation {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 220px);
-    gap: 30px;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 article h2 {
@@ -319,13 +318,17 @@ article h2 {
 }
 
 article > strong {
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    margin-top: 2%;
 }
 
 /* Positionnement des vignettes */
 #accommodation figure {
-    width: auto;
-    margin: 0;
+    /* width: auto; */
+    width: 30%;
+    min-width: 200px;
+    height: auto;
+    margin: 0 0 4% 0;
 }
 
 /* Dimensions des images de "Hébergements à Marseille */
