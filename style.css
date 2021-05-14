@@ -467,6 +467,7 @@ aside figure {
     max-width: 300px;
     min-width: 270px;
     height: auto;
+    max-height: 500px;
 }
 
 .twoPictures {
@@ -477,13 +478,13 @@ aside figure {
     width: calc(25% - 2%);
     max-width: 300px;
     min-width: 270px;
-    height: auto;
+    max-height: 500px;
 }
 
 .twoPictures figure {
     padding: 0;
     width: 100%;
-    height: calc(50% - 2%);
+    height: calc(50% - 5%);
     /* height: auto; */
     /* max-height: 250px; */
 }
