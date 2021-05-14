@@ -258,7 +258,8 @@ margin-right: 15px;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    height: 550px;
+    height: 100%;
+    max-height: 600px;
     margin-bottom: 4%;
 }
 /* Mise en page général du main */
@@ -268,6 +269,7 @@ margin-right: 15px;
     /* padding: 40px; */
     padding: 4%;
     height: 100%;
+    max-height: 600px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -300,8 +302,7 @@ img {
 
 /* Partie "Hébergements à Marseille" */
 #lodgingList article {
-    width: 67%;
-    height: auto;
+    width: 65%;
     min-width: 272px;
     /* max-width: 800px; */
 }
@@ -314,12 +315,12 @@ img {
 }
 
 article h2 {
-    margin-bottom: 20px;
+    margin-bottom: 4%;
 }
 
 article > strong {
     /* margin-top: 30px; */
-    margin-top: 2%;
+    margin: 2% 0;
 }
 
 /* Positionnement des vignettes */
@@ -327,7 +328,6 @@ article > strong {
     /* width: auto; */
     width: 30%;
     min-width: 200px;
-    height: auto;
     margin: 0 0 4% 0;
 }
 
@@ -335,7 +335,6 @@ article > strong {
 #accommodation img {
     border-radius: 13px 13px 0 0;
     max-height: 113px;
-    height: auto;
 }
 
 figcaption {
@@ -370,7 +369,8 @@ article figcaption p, .grade {
 
  #lodgingList aside {
     width: 32%;
-    height: 100%;
+    min-width: 400px;
+    /* margin: 0 0 4% 0; */
 }
 
 #headerPopular {
@@ -380,7 +380,9 @@ article figcaption p, .grade {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 20px;
+    /* margin: 20px; */
+    margin: 0 0 4% 0;
+
 }
 
 #headerPopular h2 {
@@ -393,10 +395,10 @@ aside figure {
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 0;
+    margin: 5% 0;
     position: relative;
     width: 100%;
-    height: 30%;
+    /* height: 30%; */
 }
 
 #popularList figcaption p:first-child {
