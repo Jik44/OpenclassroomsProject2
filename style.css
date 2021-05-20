@@ -4,16 +4,16 @@
     padding: 0;
     margin: 0;
 }
+
 body {
     margin: 0 auto;
     font-family : 'Raleway', sans-serif;
-    display: flex;
-    flex-flow: column wrap;
 }
 
 header, #hook, #searchBar, #filters, #result, main {
     width: 92%;
-    margin: inherit;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 h2 {
@@ -74,7 +74,6 @@ header li {
 
 header nav + li {
     background-color: #0065FC;
-
 }
 
 header li:first-child {
@@ -226,8 +225,6 @@ margin-right: 15px;
     align-items: center;
     margin-top: 25px;
     margin-bottom: 25px;
-
-
 }
 
 #result * {
@@ -252,28 +249,22 @@ margin-right: 15px;
 }
 
 /* ---------------- "Hébergements à Marseille" ------------------- */
+
 #lodgingList {
-    background-color: royalblue;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
-    max-width: 1300px;
-    height: auto;
-    /* height: 100%;
-    max-height: 600px; */
+    max-width: 1500px;
     margin-bottom: 4%;
+    height: auto;
 }
+
 /* Mise en page général du main */
 .layout {
     background-color: #F2F2F2;
-    border-radius: 15px;
-    /* padding: 40px; */
-    padding: 4%;
-    /* height: 100%; */
-    /* max-height: 600px; */
-    height: auto;
+    border-radius: 25px;
+    padding: 3%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -282,11 +273,12 @@ margin-right: 15px;
 
 article h2 {
     margin-top: 0;
+    margin-bottom: 4%;
 }
 
 figure {
     background-color: white;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 4px;
     box-shadow: 0 1px 5px rgb(165, 177, 177);
     height: auto;
@@ -308,7 +300,6 @@ img {
 #lodgingList article {
     width: 65%;
     min-width: 272px;
-    /* max-width: 800px; */
 }
 
 /* Bloc contenant les vignettes de "Hébergements à Marseille" */
@@ -316,39 +307,49 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-article h2 {
-    margin-bottom: 4%;
+    height: auto;
 }
 
 article > strong {
-    /* margin-top: 30px; */
-    margin: 2% 0;
+     margin-top: 5%;
 }
 
 /* Positionnement des vignettes */
 #accommodation figure {
-    /* width: auto; */
     width: 30%;
-    min-width: 200px;
-    margin: 0 0 4% 0;
+    height: 175px;
+    max-height: 210px;
+    min-width: 230px;
+    margin-bottom: 4%;
+}
+
+#accommodation figure a {
+    width: 110px;
+    width: 100%;
+    height: 60%;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
 }
 
 /* Dimensions des images de "Hébergements à Marseille */
 #accommodation img {
-    border-radius: 13px 13px 0 0;
-    max-height: 113px;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
 }
 
 figcaption {
     width: 100%;
-    height: 100%;
-    padding: 0 0 5px 10px;
+    padding: 5px 0 5px 10px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+article figcaption .price {
+    margin-left: 4px;
 }
 
 article figcaption p, .grade {
@@ -369,12 +370,12 @@ article figcaption p, .grade {
 #popularList figure:nth-child(1) .grade i:last-child {
     color: #0065fc;
 }
+
  /* ---------------- "Les plus populaires" ------------------- */
 
  #lodgingList aside {
     width: 32%;
-    min-width: 400px;
-    /* margin: 0 0 4% 0; */
+    min-width: 315px;
 }
 
 #headerPopular {
@@ -383,14 +384,22 @@ article figcaption p, .grade {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: flex-start;
-    /* margin: 20px; */
-    margin: 0 0 4% 0;
-
+    align-items: flex-end;
+    margin-bottom: 9%;
 }
 
 #headerPopular h2 {
     margin-top: 0;
+}
+
+/* Bloc de vignettes "Les plus populaires" */
+#popularList {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Vignettes "Les plus populaires" */
@@ -402,7 +411,19 @@ aside figure {
     margin: 6% 0;
     position: relative;
     width: 100%;
-    /* height: 30%; */
+    height: 126px;
+}
+
+aside figure:last-child {
+    margin-bottom: 2.8%;
+}
+aside figure:first-child {
+    margin-top: 0;
+}
+
+#popularList figcaption {
+    width: 50%;
+    margin: 0 0 8px 8px;
 }
 
 #popularList figcaption p:first-child {
@@ -415,33 +436,37 @@ aside figure {
 }
 #popularList figcaption .grade {
     position: absolute;
-    bottom: 6px;
-}
-
-/* Bloc de vignettes "Les plus populaires" */
-#popularList {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
+    bottom: 8px;
 }
 
 /* Dimensions des images de "Les plus populaires */
-#popularList img {
-    width: 126px;
-    height: 120px;
-    border-radius: 13px 0px 0px 13px;
+#popularList figure a {
+    width: 110px; */
+    width: 35%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+#popularList figure img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px 0 0 20px;
 }
 
 /* ---------------- "Activités à Marseille" ------------------- */
 #activity {
-    background-color: red;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 100%;
+    max-width: 1500px;
+}
+
+#activity h2 {
+    margin-bottom: 1%;
 }
 /* Positionnement des photos */
 #activityPictures {
@@ -450,22 +475,11 @@ aside figure {
     justify-content: space-between;
     width: 100%;
     max-width: 1300px;
-    /* height: 450px; */
     height: auto;
-    /* max-height: 500px; */
-
-    /* display: grid;
-    grid-template-columns: repeat(4, 20vw);
-    gap: 4%;
-    justify-content: center;
-    width: 100%;
-    height: 70vh;
-    margin: 4vh auto; */
 }
 
 /* Permet de modifier les marges des vignettes */
 .onePicture {
-    /* margin-left: 0; */
     padding: 0;
     width: calc(25% - 2%);
     max-width: 300px;
@@ -489,8 +503,6 @@ aside figure {
     padding: 0;
     width: 100%;
     height: calc(50% - 5%);
-    /* height: auto; */
-    /* max-height: 250px; */
 }
 
 /* Dimensions des images */
